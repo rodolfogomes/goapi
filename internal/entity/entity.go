@@ -15,21 +15,21 @@ func NewCategory(name string) *Category {
 }
 
 type Product struct {
-	ID         string
-	Name       string
-	Desription string
-	Price      float64
-	CategoryID string
-	ImageURL   string
+	ID          string
+	Name        string
+	Description string
+	Price       float64
+	CategoryID  string
+	ImageURL    string
 }
 
-func NewProduct(name string, description string, price float64, categoryID string, imageURL string) *Product {
+func NewProduct(name, description string, price float64, categoryID, imageURL string) *Product {
 	return &Product{
-		ID:         uuid.New().String(),
-		Name:       name,
-		Desription: description,
-		Price:      price,
-		CategoryID: categoryID,
-		ImageURL:   imageURL,
+		ID:          uuid.New().String(),
+		Name:        name,
+		Description: description,
+		Price:       price,
+		CategoryID:  categoryID,
+		ImageURL:    imageURL,
 	}
 }
